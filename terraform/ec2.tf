@@ -73,6 +73,7 @@ resource "aws_launch_template" "presentation_tier" {
     }
   }
 
+# To attache Role to EC2
   iam_instance_profile {
     name = aws_iam_instance_profile.ec2_ecr_connection.name
   }
