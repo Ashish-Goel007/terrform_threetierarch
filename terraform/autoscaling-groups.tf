@@ -48,7 +48,7 @@ resource "aws_autoscaling_group" "application_tier" {
   }
 }
 
-# Create a new ALB Target Group attachment -> Attaches a load balancer to an Auto Scaling group
+# Create a new ALB Target Group attachment
 resource "aws_autoscaling_attachment" "presentation_tier" {
   autoscaling_group_name = aws_autoscaling_group.presentation_tier.id
   lb_target_group_arn    = aws_lb_target_group.front_end.arn
